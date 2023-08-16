@@ -1,0 +1,15 @@
+@import '../base.scss';
+
+.footer {
+    display: grid;
+
+    margin-top: 50px;
+
+    place-content: center;
+    text-align: center;
+
+    padding-bottom: 20px;
+
+    background-color: $sec;
+    box-shadow: 0px -2px 5px 2px black;
+}

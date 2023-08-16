@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;700&display=swap');
+
+
+// Variables
+
+
+$bg: #242424;
+$sec: #1c1c1c;
+$sec-hov: #242424;
+$txt: #ffff;
+
+$card: #1a1a1a;
+
+$radius: 20px;
+
+$shadow: 0px 2px 5px black;
+
+
+// Animations
+
+
+@keyframes reveal-anim {
+    from {
+        opacity: 0;
+        top: 20px;
+    }
+
+    to {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+
+// Elements
+
+
+body, html, #__nuxt {
+    height: 100%;
+    background-color: $bg;
+    margin: 0;
+}
+
+li,
+h1,
+a,
+p {
+    color: $txt;
+    font-family: "Work Sans", sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.title {
+    font-size: 8vw;
+}
+
+.wrapper {
+    display: grid;
+
+    place-content: center;
+    text-align: center;
+}
+
+.scroll-rev {
+    opacity: 0;
+}
+
+.reveal {
+    position: relative;
+
+    animation-duration: 1s;
+    animation-name: reveal-anim;
+    animation-fill-mode: both;
+}
+
+
+// Components
+
+
+@mixin secetion-shadow {
+    box-shadow: black 0px 4px 5px 0px;
+}
+
+@mixin cards_grid() {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+    place-content: center;
+    gap: 30px;
+}
+
+@mixin card($height: 200px) {
+    background-color: $sec;
+
+    padding: 20px 20px 20px 20px;
+
+    border-radius: $radius;
+    box-shadow: $shadow;
+
+    height: $height;
+}
+
+@mixin btn($width: 100px) {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    text-decoration: none;
+    font-size: 20px;
+
+    background-color: $sec;
+    
+    padding: 20px 30px 20px 30px;
+
+    border-radius: $radius;
+
+    width: $width;
+
+    transition: ease-in-out 0.2s;
+}
+
+@mixin btn-hover() {
+    background-color: $bg;
+    transition: ease-in-out 0.2s;
+}
+
+@mixin media() {
+    visibility: hidden;
+    position: absolute;
+}
+
+// Media Adjustments
+
+@media screen and (max-width: 950px) {
+    .title {
+        font-size: 15vw;
+    }   
+
+    .head-content {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .head-txt {
+        visibility: hidden;
+        position: absolute;
+    }
+}

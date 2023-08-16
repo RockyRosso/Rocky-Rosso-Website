@@ -1,0 +1,14 @@
+@import '../base.scss';
+
+.project {
+    max-width: 1000px;
+    overflow-wrap: break-word;
+}
+
+video {
+    margin: 10px 10px 10px 10px;
+    aspect-ratio: 16/9;
+
+    width: 100%;
+    max-width: 500px;
+}

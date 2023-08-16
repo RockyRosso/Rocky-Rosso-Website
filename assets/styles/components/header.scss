@@ -1,0 +1,39 @@
+@import '../base.scss';
+
+.head-content {
+    $header-padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 40px;
+
+    background-color: $sec;
+
+    width: 80%;
+
+    border-radius: 50px;
+
+    margin-top: 10px;
+
+    padding-top: $header-padding;
+    padding-bottom: $header-padding;
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @include secetion-shadow();
+}
+
+.head-img {
+    $img-margins: 20px;
+
+    border-radius: 100%;
+    width: 150px;
+
+    margin-left: $img-margins;
+    margin-right: $img-margins;
+}

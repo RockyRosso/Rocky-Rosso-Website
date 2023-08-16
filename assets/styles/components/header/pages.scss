@@ -1,0 +1,52 @@
+@import '../../base.scss';
+
+.head-pages {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(0px, max-content));
+    place-content: center;
+
+    background-color: $sec;
+    width: 80%;
+
+    margin-top: 20px;
+    text-align: center;
+
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    border-radius: 50px;
+
+    overflow: hidden;
+
+    @include secetion-shadow();
+}
+
+.page-btn {
+    font-size: 40px;
+    text-align: center;
+    text-decoration: none;
+
+    background-color: $bg;
+    border-radius: 20px;
+
+    padding: 10px 20px 10px 20px;
+
+    transition: ease-in-out 0.2s;
+}
+
+// Media Tags
+
+@media screen and (max-width: 570px) {
+    .head-pages {
+        display: grid;
+        gap: 50px;
+        place-content: center;
+        grid-template-columns: max-content;
+        
+    }
+}

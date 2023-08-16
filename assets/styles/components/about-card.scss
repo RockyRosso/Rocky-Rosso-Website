@@ -1,0 +1,22 @@
+@import '../base.scss';
+
+.about-cards {
+    @include cards_grid;
+}
+
+.card {
+    background-color: $sec;
+
+    padding: 20px 20px 20px 20px;
+    @include secetion-shadow;
+
+    border-radius: 20px;
+}
+
+.card-icon {
+    width: 100px;
+}
+
+.card-txt {
+    font-size: 20px;
+}
