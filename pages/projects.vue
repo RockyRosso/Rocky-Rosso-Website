@@ -55,7 +55,7 @@ export default {
 
             const res = await fetch(`${apiBase}/projects`, {
                 method: "GET",
-                cache: "force-cache",
+                cache: "default",
                 mode: "cors",
 
                 headers: {
