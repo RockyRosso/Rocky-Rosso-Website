@@ -7,6 +7,7 @@
     </header>
 
     <main class="wrapper">
+        <div style="margin-bottom: 100px;"></div>
         <div class="projects">
             <div id="loading">
                 <h1>Loading Projects...</h1>
@@ -39,7 +40,9 @@
 <style src="../assets/styles/pages/projects.scss" />
 
 <script lang="ts">
+
 import { ProjectsData } from "../assets/types/apiRes";
+import videojs from 'video.js';
 
 export default {
     data() {
@@ -80,14 +83,20 @@ export default {
                         `<video
                             controls
                             data-setup="{  }"
+                            id="vid-player-${data[i]._id}${v}"
+                            class="video-js vjs-default-skin"
+
                         >
                             <source src="${videos[v]}" type="video/mp4" />
                         </video>`,
                     );
 
                     projectVideos.prependTo(`#${data[i]._id}`);
-                }
 
+                    videojs(`vid-player-${data[i]._id}${v}`);
+
+                }
+                
                 const projectInfo = $(
                     `<h1>${data[i].name}</h1>
                     <p>${data[i].info}</p>`,

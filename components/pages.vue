@@ -1,9 +1,12 @@
 <template>
     <div class="head-pages reveal">
-        <a @mouseenter="btnHover" @mouseleave="btnLeave" href="/" id="home" class="page-btn"><i id="home icon" class="fa-solid fa-house btn-icon"></i></a>
-        <a @mouseenter="btnHover" @mouseleave="btnLeave" href="/projects" id="projects" class="page-btn"><i id="projects icon" class="fa-solid fa-screwdriver-wrench btn-icon"></i></a>
-        <a @mouseenter="btnHover" @mouseleave="btnLeave" id="blogs (Coming Soon)" class="page-btn"><i id="blogs icon" class="fa-solid fa-file-pen btn-icon"></i></a>
+        <div v-for="page in pages">
+            <a @mouseenter="btnHover" @mouseleave="btnLeave" :href="`${page.route}`" :id="`${page.name}`" class="page-btn"><i :id="`${page.name} icon`" :class="`${page.icon}`"></i></a>
+        </div>
+        
     </div>
+
+    <Sitemobilehead :page="`${page}`" />
 </template>
 
 <style src="../assets/styles/components/header/pages.scss" />
@@ -16,12 +19,16 @@ export default {
     },
 
     data() {
+        const { $getConfig } = useNuxtApp();
+
         return {
             btnIconCache: {
                 home: '',
                 projects: '',
                 blogs: ''
-            }
+            },
+
+            pages: $getConfig().pages
         }
     },
 

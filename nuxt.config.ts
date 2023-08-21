@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    css: ['assets/styles/base.scss'],
+    css: ['assets/styles/base.scss', 'assets/styles/components/video-player.scss'],
 
     ssr: true,
 

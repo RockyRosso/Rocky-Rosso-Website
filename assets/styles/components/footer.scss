@@ -1,6 +1,10 @@
 @import '../base.scss';
 
 .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
     display: grid;
 
     margin-top: 50px;

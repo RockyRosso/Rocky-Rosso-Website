@@ -6,8 +6,6 @@
             <h1 class="head-txt">ROSSO</h1>
         </div>
     </div>
-
-    <Sitemobilehead />
 </template>
 
 <style src="../assets/styles/components/header/header.scss" />
