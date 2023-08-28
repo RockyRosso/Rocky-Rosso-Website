@@ -1,5 +1,0 @@
-[[redirects]]
-    from = "/donate"
-    to = "https://www.paypal.com/donate/?business=YQH2Z4CKRGEAY&no_recurring=0&currency_code=USD"
-    status = 200
-    force = true
