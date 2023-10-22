@@ -42,7 +42,6 @@
 <script lang="ts">
 
 import { ProjectsData } from "../assets/types/apiRes";
-import videojs from 'video.js';
 
 export default {
     data() {
@@ -84,7 +83,6 @@ export default {
                             controls
                             data-setup="{  }"
                             id="vid-player-${data[i]._id}${v}"
-                            class="video-js vjs-default-skin"
 
                         >
                             <source src="${videos[v]}" type="video/mp4" />
@@ -92,8 +90,6 @@ export default {
                     );
 
                     projectVideos.prependTo(`#${data[i]._id}`);
-
-                    videojs(`vid-player-${data[i]._id}${v}`);
 
                 }
                 

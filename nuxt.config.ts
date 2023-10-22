@@ -34,10 +34,6 @@ export default defineNuxtConfig({
                 {
                     src: "https://code.jquery.com/jquery-3.6.4.min.js",
                     type: 'text/javascript'
-                },
-
-                {
-                    src: 'https://vjs.zencdn.net/8.3.0/video.min.js'
                 }
             ]
         }
